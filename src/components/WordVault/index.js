@@ -18,4 +18,4 @@ const words = {
         picture: "#",
         soundbite: "#"
     },
-}
+};
