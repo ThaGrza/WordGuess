@@ -1,11 +1,13 @@
 .themecard {
     justify-content: center;
-    border-color: red;
+    border-color: black;
     border-style: solid;
     border-width: 1px;
-    width: 200px;
+    width: 400px;
     margin: auto;
+    margin-top: 20px;
     align-items: inherit;
+    background-color: #ffffff;
 }
 .themecard > .img-container {
     height: 60%;

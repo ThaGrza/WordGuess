@@ -16,22 +16,22 @@ function App() {
       <Wrapper >
         <Header />
         <Themecard
-          word={words[0].word}
+          word={words[0].word[0]}
           image={words[0].image}
           soundbite={words[0].soundbite} 
           />
           <Themecard
-          word={words[1].word}
+          word={words[1].word[1]}
           image={words[1].image}
           soundbite={words[1].soundbite} 
           />
           <Themecard
-          word={words[2].word}
+          word={words[2].word[2]}
           image={words[2].image}
           soundbite={words[2].soundbite} 
           />
           <Themecard
-          word={words[3].word}
+          word={words[3].word[3]}
           image={words[3].image}
           soundbite={words[3].soundbite} 
           />
