@@ -5,7 +5,7 @@ export default function(props) {
     return (
         <div className='themecard'>
             <div className='img-container'>
-                <img alt='?' src={props.image} />
+                <img alt={props.theme} src={props.image} />
             </div>
             <div className='theme-content'>
                 <ul>
@@ -18,5 +18,3 @@ export default function(props) {
         </div>
     );
 }
-
-// FILL OUT COMPONENT FOR PROPS FROM WORDS.JSON

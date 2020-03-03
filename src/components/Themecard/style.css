@@ -6,5 +6,13 @@
     width: 200px;
     margin: auto;
     align-items: inherit;
-
+}
+.themecard > .img-container {
+    height: 60%;
+    overflow: hidden;
+    text-align: center;
+}
+.img-container > img {
+    width: 60%;
+    margin-top: 10px;
 }

@@ -9,25 +9,31 @@ import Themecard from './components/Themecard';
 
 
 
+
 function App() {
   return (
     <div>
       <Wrapper >
         <Header />
         <Themecard
-          word={words[0].name}
+          word={words[0].word}
           image={words[0].image}
           soundbite={words[0].soundbite} 
           />
           <Themecard
-          word={words[1].name}
+          word={words[1].word}
           image={words[1].image}
           soundbite={words[1].soundbite} 
           />
           <Themecard
-          word={words[2].name}
+          word={words[2].word}
           image={words[2].image}
           soundbite={words[2].soundbite} 
+          />
+          <Themecard
+          word={words[3].word}
+          image={words[3].image}
+          soundbite={words[3].soundbite} 
           />
         {/* <Game /> */}
         {/* <Footer /> */}
