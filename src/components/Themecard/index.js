@@ -9,10 +9,9 @@ export default function(props) {
             </div>
             <div className='theme-content'>
                 <ul>
-                    <li>
-                        <strong>Word:</strong> {props.word}
-                    </li>
-                    
+                    <p>
+                        <strong className='theme-name'> {props.theme} </strong>
+                    </p>
                 </ul>
             </div>
         </div>
