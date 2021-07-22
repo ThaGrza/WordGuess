@@ -3,17 +3,10 @@ import './style.css';
 
 export default function(props) {
     return (
-        <div className='themecard'>
-            <div className='img-container'>
-                <img alt={props.theme} src={props.image} />
-            </div>
-            <div className='theme-content'>
-                <ul>
-                    <p>
-                        <strong className='theme-name'> {props.theme} </strong>
-                    </p>
-                </ul>
-            </div>
+        <div className='theme-card'>
+            <h2 className="themecard-header">{props.title}</h2>
+            <img className="theme-image" alt={props.theme} src={props.image} />
+            <p className="difficulty-rating">{props.difficulty}</p>
         </div>
     );
 }
