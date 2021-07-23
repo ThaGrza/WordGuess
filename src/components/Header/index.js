@@ -1,10 +1,13 @@
 import React from "react";
 import "./style.css";
+import { Link } from 'react-router-dom';
 
-function Header(){
+const Header = () => {
     return(
         <div>
-            <h1 className="header">Pop Culture Hangman</h1>
+            <Link to="/">
+                <h1 className="header">Pop Culture Hangman</h1>
+            </Link>
         </div>
     );
 }
