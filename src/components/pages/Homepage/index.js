@@ -1,13 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Themecard from '../../Themecard'
 import Themes from '../../../words.json';
 import './style.css';
 
-
 function Homepage(props) {
-    const [themeTitle, setThemeTitle] = useState();
-
-
 
     return (
         <div className="homepage-container">

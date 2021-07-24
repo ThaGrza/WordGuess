@@ -7,7 +7,6 @@ import Gamepage from './components/pages/Gamepage';
 
 
 
-
 const App = () => {
   return (
     <Router>
