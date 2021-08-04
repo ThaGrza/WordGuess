@@ -1,7 +1,7 @@
-const themeChange = (state = null, action) => {
+const themeChange = (state = 0, action) => {
     switch(action.type){
         case 'THEMECHANGE':
-            return state + 1
+            return state
         default: {
             return state
         }

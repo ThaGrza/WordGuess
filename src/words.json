@@ -5,7 +5,7 @@
         "difficulty": "Hard",
         "image": "https://images.csmonitor.com/csm/2014/04/HP-3-Characters-Exhibit-Page.png?alias=standard_900x600",
         "soundbite": "#",
-        "word": [
+        "words": [
             "expelliarmus", "expell2", "expell3"
         ]
     },
@@ -15,7 +15,7 @@
         "difficulty": "Medium",
         "image": "https://www.hollywoodreporter.com/wp-content/uploads/2020/09/SouthPark_S18_cast_2-H-2020-1600189256.jpg?w=681&h=383&crop=1",
         "soundbite": "#",
-        "word": [
+        "words": [
             "Stan", "Mr. Garrison", "Mr. Slave", "Cartman"
         ]
     },
@@ -25,7 +25,7 @@
         "difficulty": "Hard",
         "image": "https://tvline.com/wp-content/uploads/2021/03/rick-and-morty-season-5-key-art.jpg",
         "soundbite": "#",
-        "word": [
+        "words": [
             "Rick", "Morty", "Jerry", "Beth"
         ]
     },
@@ -35,7 +35,7 @@
         "difficulty": "Easy",
         "image": "https://cdn.cms.prod.nypr.digital/images/friendscast.2e16d0ba.fill-661x496.jpg",
         "soundbite": "#",
-        "word": []
+        "words": []
     },
     {
         "title": "The Office",
@@ -43,7 +43,7 @@
         "difficulty": "Easy",
         "image": "https://i.ytimg.com/vi/VcQvAze0_PI/maxresdefault.jpg",
         "soundbite": "#",
-        "word": []
+        "words": []
     },
     {
         "title": "Bioshock",
@@ -51,7 +51,7 @@
         "difficulty": "Easy",
         "image": "https://images.greenmangaming.com/e339ab5d571345578b5ea0cd8b2bf114/891582614fb84f9c9603c97ca3fc8542.jpg",
         "soundbite": "#",
-        "word": []
+        "words": []
     },
     {
         "title": "Animals",
@@ -59,6 +59,6 @@
         "difficulty": "Easy",
         "image": "https://a-z-animals.com/media/2021/01/mammals-400x300.jpg",
         "soundbite": "#",
-        "word": []
+        "words": []
     }
 ]

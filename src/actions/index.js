@@ -1,6 +1,6 @@
-export const themeChange = () =>{
+export const themeChange = (themeTitle, themeBck, themeWords) => {
     return {
-        type: 'themeChange',
-        payload: "HARRY POTTER"
+        type: 'THEMECHANGE',
+        payload: [{themeTitle,}]
     };
 };

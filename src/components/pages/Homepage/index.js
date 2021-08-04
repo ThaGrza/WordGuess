@@ -13,6 +13,7 @@ function Homepage(props) {
                     title={Themes.title}
                     image={Themes.image}
                     difficulty={Themes.difficulty}
+                    themeWords={Themes.words}
                     />
                 ))}
             </div>

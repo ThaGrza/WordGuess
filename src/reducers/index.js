@@ -1,8 +1,8 @@
-import counterReducer from "./theme";
+import themeReducer from "./theme";
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
-    counterReducer
+    themeReducer
 })
 
 export default allReducers;

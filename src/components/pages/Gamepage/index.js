@@ -5,7 +5,7 @@ const Gamepage = (props) => {
 
     return (
         <div className="game-container">
-            <h1 className="header">hello{props.title}</h1>
+            <h1 className="header">hello</h1>
         </div>
     )
 }
