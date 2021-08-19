@@ -6,7 +6,7 @@ const Header = () => {
     return(
         <div>
             <Link to="/">
-                <h1 className="header">Pop Culture Hangman</h1>
+                <h1 className="site-header">Pop Culture Hangman</h1>
             </Link>
         </div>
     );

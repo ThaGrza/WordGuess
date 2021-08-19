@@ -13,7 +13,7 @@ const App = () => {
       <div className="parent-container">
         <Header />
         <Route exact path="/" component={Homepage} />
-        <Route exact path="/Gamepage/:themeTitle" component={Gamepage} />
+        <Route exact path="/Gamepage" component={Gamepage} />
       </div>
     </Router>
   )

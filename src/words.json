@@ -31,11 +31,11 @@
     },
     {
         "title": "Friends",
-        "themeBackground": "background image",
+        "themeBackground": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2018_19/1337916/monicas-apartment-today-tease-180509.jpg",
         "difficulty": "Easy",
         "image": "https://cdn.cms.prod.nypr.digital/images/friendscast.2e16d0ba.fill-661x496.jpg",
         "soundbite": "#",
-        "words": []
+        "words": ["Monica", "Ross"]
     },
     {
         "title": "The Office",

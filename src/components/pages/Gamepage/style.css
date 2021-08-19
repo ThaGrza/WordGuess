@@ -1,0 +1,8 @@
+.game-container{
+    height: 900px;
+    background-size: cover;
+}
+
+.game-title{
+    text-align: center;
+}

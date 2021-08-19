@@ -14,6 +14,8 @@ function Homepage(props) {
                     image={Themes.image}
                     difficulty={Themes.difficulty}
                     themeWords={Themes.words}
+                    themeTitle={Themes.title}
+                    themeBck={Themes.themeBackground}
                     />
                 ))}
             </div>
