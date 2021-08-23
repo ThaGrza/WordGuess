@@ -1,7 +1,10 @@
+.site-header-container{
+    text-decoration: none;
+}
+
 .site-header {
     color: #e44141;
-    padding-top: 15px;
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 0em;
     text-align: center;
 }

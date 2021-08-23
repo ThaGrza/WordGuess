@@ -4,11 +4,17 @@
     height: 100%;
     width: 100%;
     overflow-x: hidden;
+    justify-content: center;
 }   
+
+.site-info{
+    font-size: 1.3rem;
+}
 
 .theme-selection{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     height: 100%;
     width: 100%;
 }

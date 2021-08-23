@@ -1,0 +1,17 @@
+.letters-box{
+    padding-right: 1em;
+}
+
+.letter-button{
+    color: black;
+    background-color: #f7f794;
+    font-size: 4rem;
+    font-weight: 600;
+    padding: 10px;
+    transition: transform .3s;
+    border-radius: 10px;
+}
+
+.letter-button:hover{
+    transform: scale(1.4);
+}
