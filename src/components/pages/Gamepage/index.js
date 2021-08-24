@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Letters from '../../Letters';
 import Alphabet from "../../../alphabet.json";
 import { useSelector } from 'react-redux';
@@ -6,8 +6,7 @@ import './style.css';
 
 const Gamepage = (props) => {
     const themeReducer = useSelector(state => state.themeReducer);
-// {themeReducer[2]} => theme words;
-
+    let letterGuessed = 'l';
 
 
 
@@ -23,14 +22,6 @@ const Gamepage = (props) => {
                     />
                 ))}
             </div>
-            {/* Display word count for hidden word */}
-
-            {/* Map through game tiles */}
-
-            {/* Win / lose logic */}
-
-            {/* Misses Letter hangman animation */}
-
         </div>
     )
 }

@@ -5,6 +5,9 @@
     border-color: black;
     border-style: solid;
 }
+.theme-link{
+    text-decoration: none;
+}
 
 .themecard-header{
     color: black;
