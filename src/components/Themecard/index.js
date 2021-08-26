@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
-import { themeChange } from '../../actions';
+import { themeChange } from '../../actions/themeChange';
 
 export default function(props) {
     const dispatch = useDispatch();

@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css';
 import { useDispatch } from 'react-redux';
-import { letterGuessed } from '../../actions';
+import { letterGuessed } from '../../actions/letterGuessed';
 
 
 const Letters = (props) => {
@@ -9,7 +9,7 @@ const Letters = (props) => {
     
     return (
         <div className="letters-box">
-            <button className="letter-button" onClick={() => dispatch(letterGuessed(this.value))}>{props.letter}</button>
+            <button className="letter-button" onClick={() => dispatch(letterGuessed(props.letter))}>{props.letter}</button>
         </div>
     )
 }

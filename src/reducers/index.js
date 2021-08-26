@@ -1,8 +1,10 @@
 import themeReducer from "./theme";
+import guessedReducer from "./guessed";
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
-    themeReducer
+    themeReducer,
+    guessedReducer
 })
 
-export default allReducers;
+export default allReducers; 
