@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Letters from '../../Letters';
 import Alphabet from "../../../alphabet.json";
 import { useSelector } from 'react-redux';
 import './style.css';
 import hangmanImage from "../../../images/hangman/hangman.png";
 
+const lettersGuessed = [];
+var newWord = '';
+
+
+
 const Gamepage = (props) => {
     const themeReducer = useSelector(state => state.themeReducer);
-    const letterGuessed = useSelector(state => state.guessedReducer[0]);
+    const letterGuess = useSelector(state => state.guessedReducer[0]);
+    var publicWord = ''
+    var guessed = false;
 
 // Sets current word to be guessed.
     var words = [];
@@ -15,36 +22,41 @@ const Gamepage = (props) => {
         words.push(themeReducer[2][i]);
     }
     var currentWord = words[0];
-    const guessedLetters = [];
-    var displayCurentWord = ''
-    var guessesLeft = currentWord.length + 5;
+    var guessesLeft = 7;
 
     function hideCurrentWord(){
         for(let i = 0; i < currentWord.length; i++){
-            displayCurentWord += '_ ';
+            publicWord += '_ ';
         }
     }
-
-    function compareGuess(letter){
-        for(let i = 0; i < currentWord.length; i++){
-            if(letterGuessed === currentWord[i]){
-
-            }
-        }
-    }
-
     hideCurrentWord();
 
 
+// last letter of word doesnt display letter ??????????
+    function compareGuess(){
+        lettersGuessed.push(letterGuess);
+        console.log(publicWord);
+        console.log(currentWord);
+        for(let j = 0; j < lettersGuessed.length; j++){
+            for(let i = 0; i < currentWord.length; i++){
+                if(lettersGuessed[j] === currentWord[i]){
+                    newWord += lettersGuessed[j];
+                }else{
+                    newWord += ' _ ';
+                    publicWord = newWord;
+                }
+            }
+        }
+        console.log(publicWord);
+        console.log(lettersGuessed);
+    }
 
-    // function changeWord(){
-    //     words.shift();
-    // }
+    compareGuess();
 
 
-    // if(letterGuessed === 'E' ){
-    //     changeWord();
-    // }
+
+
+
 
     return (
         <div className="game-container" style={{ backgroundImage: "url(" + themeReducer[1] + ")"}}>
@@ -53,9 +65,11 @@ const Gamepage = (props) => {
             </div>
             <div className="hangman-container">
                 <img className="hangmanImage" alt="hangman" src={hangmanImage} />
-                <div className="guesses-left">{guessesLeft}</div>
+                <div className="guesses-left">Guesses Left: {guessesLeft}</div>
+                <div className="guesses-letters">{lettersGuessed}</div>
+
                 <div className="current-word">
-                    {displayCurentWord}
+                    {publicWord}
                 </div>
             </div>
             <div className="tiles-container">
@@ -71,3 +85,13 @@ const Gamepage = (props) => {
 }
 
 export default Gamepage;
+
+
+
+
+
+
+
+
+
+// once a letter has been clicked display red X over letter tile or remove tile

@@ -1,4 +1,4 @@
-const letterGuessed = (state = 0, action) => {
+const letterGuessed = (state = " ", action) => {
     switch(action.type){
         case 'LETTERGUESSED':
             return state = action.payload;
