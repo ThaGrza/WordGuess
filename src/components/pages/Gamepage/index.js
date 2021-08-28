@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Letters from '../../Letters';
 import Alphabet from "../../../alphabet.json";
 import { useSelector } from 'react-redux';
@@ -6,15 +6,13 @@ import './style.css';
 import hangmanImage from "../../../images/hangman/hangman.png";
 
 const lettersGuessed = [];
-var newWord = '';
-
-
+var publicWord = [];
 
 const Gamepage = (props) => {
     const themeReducer = useSelector(state => state.themeReducer);
     const letterGuess = useSelector(state => state.guessedReducer[0]);
-    var publicWord = ''
     var guessed = false;
+
 
 // Sets current word to be guessed.
     var words = [];
@@ -24,38 +22,29 @@ const Gamepage = (props) => {
     var currentWord = words[0];
     var guessesLeft = 7;
 
+    if(lettersGuessed.length === 0){
+        console.log(lettersGuessed);
+        hideCurrentWord();
+    }
     function hideCurrentWord(){
         for(let i = 0; i < currentWord.length; i++){
-            publicWord += '_ ';
+            publicWord.push('_ ');
         }
     }
-    hideCurrentWord();
 
-
-// last letter of word doesnt display letter ??????????
     function compareGuess(){
-        lettersGuessed.push(letterGuess);
         console.log(publicWord);
-        console.log(currentWord);
-        for(let j = 0; j < lettersGuessed.length; j++){
-            for(let i = 0; i < currentWord.length; i++){
-                if(lettersGuessed[j] === currentWord[i]){
-                    newWord += lettersGuessed[j];
-                }else{
-                    newWord += ' _ ';
-                    publicWord = newWord;
-                }
+        for(let i = 0; i < currentWord.length; i++){
+            if(letterGuess === currentWord[i]){
+                publicWord.splice(i, 1, letterGuess);
             }
         }
-        console.log(publicWord);
-        console.log(lettersGuessed);
     }
 
-    compareGuess();
-
-
-
-
+    if(letterGuess !== " "){
+        lettersGuessed.push(letterGuess);
+        compareGuess();
+    }
 
 
     return (
@@ -75,7 +64,6 @@ const Gamepage = (props) => {
             <div className="tiles-container">
                 {Alphabet.map(Alphabet => (
                     <Letters
-                    letter2={Alphabet.letter}
                     letter={Alphabet.letter}
                     />
                 ))}
@@ -83,6 +71,7 @@ const Gamepage = (props) => {
         </div>
     )
 }
+
 
 export default Gamepage;
 
