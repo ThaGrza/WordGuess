@@ -5,47 +5,82 @@ import { useSelector } from 'react-redux';
 import './style.css';
 import hangmanImage from "../../../images/hangman/hangman.png";
 
-const lettersGuessed = [];
+var lettersGuessed = [];
 var publicWord = [];
+var correctGuess = 0;
+var guessesLeft = 7;
+var inPlay = false;
 
 const Gamepage = (props) => {
     const themeReducer = useSelector(state => state.themeReducer);
     const letterGuess = useSelector(state => state.guessedReducer[0]);
-    var guessed = false;
 
-
-// Sets current word to be guessed.
+// CHANGE TO FUNCTION AND CALL FROM IF STATEMENT BASED ON THEME WORDS EQUALLING SOMETHING
     var words = [];
     for(let i = 0; i < themeReducer[2].length; i++){
+        // FIGURE OUT THEMEREDUCER WORD POSITIONS AND SET VARIABLE TO GO TO NEXT WORD WHEN 
         words.push(themeReducer[2][i]);
     }
     var currentWord = words[0];
-    var guessesLeft = 7;
-
-    if(lettersGuessed.length === 0){
-        console.log(lettersGuessed);
-        hideCurrentWord();
+    // FIX THIS
+    function wordSelector(count){
+        for(count; count < themeReducer[2].length; count++){
+            words.push(themeReducer[2][count]);
+        }
     }
+
+    if(inPlay === false){
+        hideCurrentWord()
+    }    
+
     function hideCurrentWord(){
         for(let i = 0; i < currentWord.length; i++){
             publicWord.push('_ ');
         }
     }
 
-    function compareGuess(){
-        console.log(publicWord);
-        for(let i = 0; i < currentWord.length; i++){
-            if(letterGuess === currentWord[i]){
-                publicWord.splice(i, 1, letterGuess);
-            }
+    function gameReset(){
+        correctGuess = 0;
+        guessesLeft = 7;
+        publicWord = [];
+        lettersGuessed = [];
+    }
+
+    function scoreKeeper(guess){
+        if(guess === true){
+            correctGuess += 1;
+        }else if(guess === false){
+            guessesLeft -= 1;
+        }
+        if(correctGuess === currentWord.length){
+            alert("Round Won!");
+            gameReset();
+
+        }
+        if(guessesLeft === 0){
+            alert("You've been hung!")
+            gameReset();
         }
     }
 
+    function compareGuess(){
+        let guess = false;
+        for(let i = 0; i < currentWord.length; i++){
+            if(letterGuess === currentWord[i]){
+                publicWord.splice(i, 1, letterGuess);
+                guess = true;
+            }
+        }
+        scoreKeeper(guess);
+    }
+    
+    // Starts the gameplay Loop
     if(letterGuess !== " "){
+        wordSelector(0);
+        inPlay = true;
         lettersGuessed.push(letterGuess);
         compareGuess();
     }
-
 
     return (
         <div className="game-container" style={{ backgroundImage: "url(" + themeReducer[1] + ")"}}>
@@ -55,6 +90,7 @@ const Gamepage = (props) => {
             <div className="hangman-container">
                 <img className="hangmanImage" alt="hangman" src={hangmanImage} />
                 <div className="guesses-left">Guesses Left: {guessesLeft}</div>
+                <div className="guesses-left">Correct Guesses: {correctGuess}</div>
                 <div className="guesses-letters">{lettersGuessed}</div>
 
                 <div className="current-word">
@@ -74,13 +110,3 @@ const Gamepage = (props) => {
 
 
 export default Gamepage;
-
-
-
-
-
-
-
-
-
-// once a letter has been clicked display red X over letter tile or remove tile
